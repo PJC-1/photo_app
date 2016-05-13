@@ -6,9 +6,9 @@ Rails.application.routes.draw do
   root to: "users#index"
 
   # User/Picture resource
-  resources :users do
-    resources :pictures
-  end
+  resources :users
+
+  resources :pictures
 
   # Pictures resource
   resources :pictures, only: [] do

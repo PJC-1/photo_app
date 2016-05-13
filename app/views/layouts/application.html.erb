@@ -21,14 +21,17 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-              <li><%= link_to "Profile"%></li>
-              <li><%= link_to "News Feed"%></li>
-              <li><%= link_to "Log Out"%></li>
+            <% if user_signed_in? %>
+              <li><%= link_to "Profile" %></li>
+              <li><%= link_to "News Feed" %></li>
+              <li><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
           </ul>
-          <ul class="nav navbar-nav pull-right">
-              <li><%= link_to "Create Account"%></li>
-              <li><%= link_to "Log In"%></li>
-          </ul>
+          <% else %>
+            <ul class="nav navbar-nav pull-right">
+              <li><%= link_to "Create Account", new_user_registration_path %></li>
+              <li><%= link_to "Log In", new_user_session_path %></li>
+            </ul>
+          <% end %>
         </div>
       </div>
     </nav>

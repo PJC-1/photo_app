@@ -47,6 +47,9 @@ gem 'cloudinary'
 # works with cloudinary to manage image upload
 gem 'carrierwave'
 
+#works with cloundinary
+gem 'rmagick'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
