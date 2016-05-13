@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+  get 'user/index'
+
   devise_for :users
   root to: "users#index"
 
@@ -16,10 +19,5 @@ Rails.application.routes.draw do
       get "/tags" => "pictures#tags_search"
     end
   end
-
-  # Sessions routes
-  get   "/login", to: "sessions#new"
-  get   "/logout", to: "sessions#destroy"
-  post  "/sessions", to: "sessions#create"
 
 end
