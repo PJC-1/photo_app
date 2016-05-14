@@ -41,14 +41,14 @@ gem 'devise'
 #API keys securely
 gem 'figaro'
 
-# Image management upload
-gem 'cloudinary'
-
 # works with cloudinary to manage image upload
 gem 'carrierwave'
 
+# Image management upload
+gem 'cloudinary'
+
 #works with cloundinary
-gem 'rmagick'
+# gem 'rmagick'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
