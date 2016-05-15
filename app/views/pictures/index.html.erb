@@ -1,2 +1,8 @@
 <h1>Picture#index</h1>
-<%= link_to "Upload Image", new_picture_path, class:"btn btn-default" %> 
+
+<%= link_to "Upload Image", new_picture_path, class:"btn btn-default" %>
+
+
+<% @pictures.each do |picture| %>
+<%= cl_image_tag(picture.pic_img_url) %>
+<% end %>
