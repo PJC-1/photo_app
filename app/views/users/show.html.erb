@@ -1,12 +1,33 @@
-<div class="container">
-  <div class="bio-info">
-    <section class="teaser col-md-4 col-md-offset-4">
-      <h3><%= @user.email %>'s Personal Feed</h3>
+<article class="profile-1 col-md-10 col-md-offset-1">
+  <header class="bio-info">
+    <div class="profile-img">
+      <h3><%= @user.first_name %>'s Profile</h3>
       <%= image_tag "default-placeholder.png", size:"260x200" %>
+    </div>
+    <div class="profile-info">
       <p><strong>First Name: </strong><%= @user.first_name %></p>
       <p><strong>Last Name: </strong><%= @user.last_name %></p>
-    </section>
+      <%= link_to "Edit Profile", edit_user_path(@user), class:"btn btn-primary" %>
+    </div>
+  </header>
 
-    <%= link_to "Settings", edit_user_path(@user), :class=> "glyphicon glyphicon-wrench" %>
+  <div class="img-display">
+    <div class="img-1">
+      <%= image_tag "default-placeholder.png", size:"280x220" %>
+      <%= image_tag "default-placeholder.png", size:"280x220" %>
+      <%= image_tag "default-placeholder.png", size:"280x220" %>
+    </div>
+    <div class="img-2">
+      <%= image_tag "default-placeholder.png", size:"280x220" %>
+      <%= image_tag "default-placeholder.png", size:"280x220" %>
+      <%= image_tag "default-placeholder.png", size:"280x220" %>
+    </div>
+    <div class="img-3">
+      <%= image_tag "default-placeholder.png", size:"280x220" %>
+      <%= image_tag "default-placeholder.png", size:"280x220" %>
+      <%= image_tag "default-placeholder.png", size:"280x220" %>
+    </div>
   </div>
-</div>
+
+
+</article>

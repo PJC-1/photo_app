@@ -9,6 +9,9 @@
   color: white;
 }
 
+#navbar {
+  margin-top: 5px;
+}
 .navbar a {
   color: black;
   background-color: rgba(0, 0, 0, 0);
@@ -25,4 +28,36 @@
 
 .glyphicon {
   font-size: 17px;
+}
+
+article {
+  background-color: #fafafa;
+  border: 0;
+}
+
+
+.img-display .img-1 .a {
+  display: block;
+  position: relative;
+  margin: 0;
+  padding: 0px;
+  vertical-align: baseline;
+}
+img {
+margin-right: 107px;
+margin-bottom: 40px;
+}
+
+.bio-info {
+  align-items: stretch;
+  border: 0;
+  box-sizing: border-box;
+  position: relative;
+  margin: 0;
+  margin-left: 50px;
+  display: flex;
+}
+
+.profile-info {
+  padding-top: 55px;
 }
