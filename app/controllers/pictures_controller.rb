@@ -1,7 +1,7 @@
 class PicturesController < ApplicationController
 
     def index
-      @pictures = Picture.all
+      @pictures = current_user.pictures
     end
 
     def new
@@ -21,6 +21,8 @@ class PicturesController < ApplicationController
                                   #     :crop => :fit, :format => 'png'}
                                   #   ],
                                   #   :tags => ['special', 'for_homepage'])
+      current_user.pictures << @picture
+
       redirect_to pictures_path
     end
 
