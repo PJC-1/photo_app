@@ -1,33 +1,35 @@
-<article class="profile-1 col-md-10 col-md-offset-1">
-  <header class="bio-info">
-    <div class="profile-img">
-      <h3><%= @user.first_name %>'s Profile</h3>
-      <%= image_tag "default-placeholder.png", size:"260x200" %>
-    </div>
-    <div class="profile-info">
-      <p><strong>First Name: </strong><%= @user.first_name %></p>
-      <p><strong>Last Name: </strong><%= @user.last_name %></p>
-      <%= link_to "Edit Profile", edit_user_path(@user), class:"btn btn-primary" %>
-    </div>
-  </header>
+<section class="profile-layout">
+<main class="layout layout-1">
+  <article class="profile-1">
+    <header class="bio-info">
+      <div class="profile-img">
+        <h3><%= @user.first_name %>'s Profile</h3>
+        <%= image_tag "default-placeholder.png", size:"260x200" %>
+      </div>
+      <div class="profile-info">
+        <p><strong>First Name: </strong><%= @user.first_name %></p>
+        <p><strong>Last Name: </strong><%= @user.last_name %></p>
+        <%= link_to "Edit Profile", edit_user_path(@user), class:"btn btn-primary" %>
+      </div>
+    </header>
 
-  <div class="img-display">
-    <div class="img-1">
-      <%= image_tag "default-placeholder.png", size:"280x220" %>
-      <%= image_tag "default-placeholder.png", size:"280x220" %>
-      <%= image_tag "default-placeholder.png", size:"280x220" %>
+    <div class="img-display">
+      <div class="img-1">
+        <%= image_tag "default-placeholder.png", size:"280x220" %>
+        <%= image_tag "default-placeholder.png", size:"280x220" %>
+        <%= image_tag "default-placeholder.png", size:"280x220" %>
+      </div>
+      <div class="img-2">
+        <%= image_tag "default-placeholder.png", size:"280x220" %>
+        <%= image_tag "default-placeholder.png", size:"280x220" %>
+        <%= image_tag "default-placeholder.png", size:"280x220" %>
+      </div>
+      <div class="img-3">
+        <%= image_tag "default-placeholder.png", size:"280x220" %>
+        <%= image_tag "default-placeholder.png", size:"280x220" %>
+        <%= image_tag "default-placeholder.png", size:"280x220" %>
+      </div>
     </div>
-    <div class="img-2">
-      <%= image_tag "default-placeholder.png", size:"280x220" %>
-      <%= image_tag "default-placeholder.png", size:"280x220" %>
-      <%= image_tag "default-placeholder.png", size:"280x220" %>
-    </div>
-    <div class="img-3">
-      <%= image_tag "default-placeholder.png", size:"280x220" %>
-      <%= image_tag "default-placeholder.png", size:"280x220" %>
-      <%= image_tag "default-placeholder.png", size:"280x220" %>
-    </div>
-  </div>
-
-
-</article>
+  </article>
+</main>
+</section>

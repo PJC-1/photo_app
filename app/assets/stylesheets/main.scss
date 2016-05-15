@@ -12,29 +12,33 @@
 #navbar {
   margin-top: 5px;
 }
+
+.navbar {
+  border-bottom: 1px solid #dbdbdb;
+  margin-bottom: 0px;
+}
 .navbar a {
   color: black;
   background-color: rgba(0, 0, 0, 0);
   display: inline-block;
   padding: 18px;
 }
-
 .teaser img {
   border-radius: 5px;
   display: block;
   margin-bottom: 22px;
   max-width: 100%
 }
-
 .glyphicon {
   font-size: 17px;
 }
-
-article {
-  background-color: #fafafa;
-  border: 0;
+.alert {
+  padding: 0;
+  margin-bottom:0;
 }
-
+.layout, .layout.layout-1{
+  background-color: #fafafa;
+}
 
 .img-display .img-1 .a {
   display: block;
