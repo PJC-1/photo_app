@@ -1,4 +1,25 @@
-<%= form_for (Picture.new) do |f| %>
+<!-- <%= form_for (Picture.new) do |f| %>
   <%= f.file_field (:pic_img) %>
   <%= f.submit "Submit picture" %>
-<% end %>
+<% end %> -->
+
+
+<div id='backend_upload'>
+  <h1>New Photo</h1>
+  <h2>Image file is uploaded through the server</h2>
+  <%= form_for(@picture, :url => pictures_path) do |f| %>
+
+    <div class="form_line">
+      <%= f.label :pic_img, "Image:" %>
+      <div class="form_controls">
+        <%= f.file_field :pic_img %>
+        <%= f.hidden_field(:pic_img_cache) %>
+      </div>
+    </div>
+    <div class="form_line">
+      <div class="form_controls">
+        <%= f.submit "Submit Photo" %>
+      </div>
+    </div>
+  <% end %>
+</div>
