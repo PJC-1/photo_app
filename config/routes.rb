@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   get 'user/index'
 
+  #Devise routes
   devise_for :users
   root to: "users#index"
 
