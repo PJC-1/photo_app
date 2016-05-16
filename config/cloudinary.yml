@@ -1,18 +1,19 @@
+---
 development:
   cloud_name: photo-app
-  api_key: '435854513936713'
-  api_secret: ift4DKmaDkfx87H1fcwWeVVW_C0
+  api_key: '442877671844546'
+  api_secret: AFHZTZh7Jk_9ogV4tiyTcHcS7iE
   enhance_image_tag: true
   static_image_support: false
 production:
   cloud_name: photo-app
-  api_key: '435854513936713'
-  api_secret: ift4DKmaDkfx87H1fcwWeVVW_C0
+  api_key: '442877671844546'
+  api_secret: AFHZTZh7Jk_9ogV4tiyTcHcS7iE
   enhance_image_tag: true
   static_image_support: true
 test:
   cloud_name: photo-app
-  api_key: '435854513936713'
-  api_secret: ift4DKmaDkfx87H1fcwWeVVW_C0
+  api_key: '442877671844546'
+  api_secret: AFHZTZh7Jk_9ogV4tiyTcHcS7iE
   enhance_image_tag: true
   static_image_support: false
