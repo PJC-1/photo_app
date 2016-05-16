@@ -13,23 +13,16 @@
       </div>
     </header>
 
-    <div class="img-display">
-      <div class="img-1">
-        <%= image_tag "default-placeholder.png", size:"280x220" %>
-        <%= image_tag "default-placeholder.png", size:"280x220" %>
-        <%= image_tag "default-placeholder.png", size:"280x220" %>
-      </div>
-      <div class="img-2">
-        <%= image_tag "default-placeholder.png", size:"280x220" %>
-        <%= image_tag "default-placeholder.png", size:"280x220" %>
-        <%= image_tag "default-placeholder.png", size:"280x220" %>
-      </div>
-      <div class="img-3">
-        <%= image_tag "default-placeholder.png", size:"280x220" %>
-        <%= image_tag "default-placeholder.png", size:"280x220" %>
-        <%= image_tag "default-placeholder.png", size:"280x220" %>
-      </div>
-    </div>
+    <article class="index-1 col-md-10 col-md-offset-1">
+     <div class="row">
+       <% @pictures.each do |picture| %>
+           <section class="teaser col-md-4">
+             <h5>Images</h5>
+             <%= cl_image_tag(picture.pic_img_url) %>
+           </section>
+       <% end %>
+     </div>
+   </article>
   </article>
 </main>
 </section>
