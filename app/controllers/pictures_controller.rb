@@ -15,7 +15,6 @@ class PicturesController < ApplicationController
     def create
       @picture = Picture.create(picture_params)
       Cloudinary::Uploader.upload(params[:picture][:pic_img])
-                                  # :public_id => "",
                                   # :crop => :limit, :width => 2000, :height => 2000,
                                   # :eager => [
                                   #   { :width => 200, :height => 200,
@@ -28,6 +27,18 @@ class PicturesController < ApplicationController
       current_user.pictures << @picture
 
       redirect_to pictures_path
+    end
+
+    def destroy
+      @user = User.find_by_id(params[:id])
+      @pictures = Picture.find_by_id(params[:id])
+      if current_user
+        @current_user.pictures.find_by_id(params[:id]).destroy
+        redirect_to user_path(current_user)
+      else
+        flash[:notice]="You are not authorized to delete pictures!"
+        redirect_to user_path(@user)
+      end
     end
 
     private

@@ -51,6 +51,9 @@ gem 'carrierwave'
 # Image management upload
 gem 'cloudinary'
 
+# Show number of items per pages
+gem 'will_paginate', '~> 3.1.0'
+
 #works with cloundinary
 # gem 'rmagick'
 
