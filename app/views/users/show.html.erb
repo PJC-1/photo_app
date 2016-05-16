@@ -4,12 +4,13 @@
     <header class="bio-info">
       <div class="profile-img">
         <h3><%= @user.first_name %>'s Profile</h3>
+        <h3><%= @user.email %>'s Profile</h3>
         <%= image_tag "default-placeholder.png", size:"260x200" %>
       </div>
       <div class="profile-info">
         <p><strong>First Name: </strong><%= @user.first_name %></p>
         <p><strong>Last Name: </strong><%= @user.last_name %></p>
-        <%= link_to "Edit Profile", edit_user_path(@user), class:"btn btn-primary" %>
+        <%= link_to "Edit Profile", edit_user_registration_path, class:"btn btn-primary" %>
       </div>
     </header>
 
