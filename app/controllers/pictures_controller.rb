@@ -10,6 +10,7 @@ class PicturesController < ApplicationController
 
     def show
       @picture = Picture.find_by_id(params[:id])
+      @comment = Comment.find_by_id(:id)
     end
 
     def create
