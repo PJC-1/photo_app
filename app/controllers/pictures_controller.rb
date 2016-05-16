@@ -8,6 +8,10 @@ class PicturesController < ApplicationController
       @picture = Picture.new
     end
 
+    def show
+      @picture = Picture.find_by_id(params[:id])
+    end
+
     def create
       @picture = Picture.create(picture_params)
       Cloudinary::Uploader.upload(params[:picture][:pic_img])
