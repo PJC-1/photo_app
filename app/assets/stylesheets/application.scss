@@ -1,3 +1,10 @@
+/*
+*= require_self
+*= require 'masonry/transitions'
+*= require_tree .
+*/
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "bootswatch/paper/variables";
+@import "bootswatch/paper/bootswatch";
 @import "main";

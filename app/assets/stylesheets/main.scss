@@ -16,7 +16,7 @@
 }
 
 .navbar {
-  border-bottom: 1px solid #dbdbdb;
+  border-bottom: 0px solid #dbdbdb;
   margin-bottom: 0px;
 }
 .navbar a {
@@ -29,14 +29,14 @@
   border-radius: 5px;
   display: block;
   margin-bottom: 22px;
-  max-width: 100%
+  margin-top: 30px;
+  max-width: 100%;
 }
 
 .teaserShow img {
   border-radius: 5px;
   display: block;
   margin-bottom: 22px;
-  max-width: 100%
 }
 
 .glyphicon {
@@ -75,6 +75,11 @@ margin-bottom: 40px;
 .profile-info {
   padding-top: 55px;
 }
-.form-inputs{
-  background-color: black;
+
+
+#upload-img .btn {
+  margin-right: 25px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+
 }

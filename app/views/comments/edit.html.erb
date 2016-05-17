@@ -1,0 +1,11 @@
+<div class="col-md-4 col-md-offset-4">
+  <h2>Edit Comment</h2>
+  <div class="form-group">
+    <%= form_for [@picture,@comment] do |f| %>
+      <div>
+        <%= f.text_area :post, placeholder: "Comment Body", size:"60x10", class:"form-control" %>
+      </div>
+      <%= f.submit "Submit", formaction:"/pictures/#{@picture.id}/comments/#{@comment.id}", class:"btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
