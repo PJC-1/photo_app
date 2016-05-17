@@ -33,11 +33,11 @@ class PicturesController < ApplicationController
       @user = User.find_by_id(params[:id])
       @pictures = Picture.find_by_id(params[:id])
       if current_user
-        @current_user.pictures.find_by_id(params[:id]).destroy
+        current_user.pictures.find_by_id(params[:id]).destroy
         redirect_to user_path(current_user)
       else
         flash[:notice]="You are not authorized to delete pictures!"
-        redirect_to user_path(@user)
+        redirect_to user_path(current_user)
       end
     end
 
