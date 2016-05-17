@@ -20,7 +20,6 @@
           <% @pictures.each do |picture| %>
             <section class="teaser col-md-4">
               <%= cl_image_tag(picture.pic_img_url) %>
-              <%= button_to "Delete Image", picture_path(picture.id), data: {:confirm=>'Are you sure you want to delete this comment?'},method: :delete, class: "btn btn-small btn-danger" %>
             </section>
           <% end %>
         </div>
