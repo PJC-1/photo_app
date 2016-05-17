@@ -52,15 +52,15 @@ class CommentsController < ApplicationController
     redirect_to root_path
   end
 
-  def destory
+  def destroy
     @picture = Picture.find(params[:picture_id])
-    @comment = @picture.comments.find(params[:comment_id])
+    @comment = @picture.comments.find(params[:id])
     if current_user == @comment.user
-      @picture.comments.destory(@comment)
+      @comment.destroy
       flash[:notice] = "Succesfully deleted comment!"
-      redirect_to root_path
+      redirect_to picture_path(@picture)
     else
-      flash[:notice] = "You are not authorizedto delete comments!"
+      flash[:notice] = "You are not authorized to delete comments!"
     end
   end
 
