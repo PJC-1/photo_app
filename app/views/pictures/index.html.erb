@@ -6,7 +6,7 @@
 <div id="picz" class="transitions-enabled">
   <% @pictures.each do |picture| %>
     <div class="box">
-      <a href="http://localhost:3000/pictures/<%= picture.id %>"><img src="<%= picture.pic_img_url %>"></a>
+      <%= link_to cl_image_tag(picture.pic_img_url), "/pictures/#{picture.id}" %>
     </div>
   <% end %>
 </div>
