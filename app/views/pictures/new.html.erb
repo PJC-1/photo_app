@@ -7,8 +7,11 @@
       <%= f.label :pic_img, "Image:" %>
       <div class="form_controls">
         <%= f.file_field :pic_img %>
-        <%= f.text_field :title %>
+        <%= f.label :title %>
+        <%= f.text_field :title %><br />
         <%= f.hidden_field(:pic_img_cache) %>
+        <%= f.label :tag_list %>
+        <%= f.text_field :tag_list %>
       </div>
     </div>
     <div class="form_line">
