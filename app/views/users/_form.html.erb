@@ -11,17 +11,20 @@
         <input type="text" class="form-control" id="inputFirst" placeholder="First">
       </div>
     </div>
+
     <div class="form-group">
       <label for="inputLast" class="col-lg-2 control-label">Last</label>
       <div class="col-lg-10">
         <input type="text" class="form-control" id="inputLast" placeholder="Last">
       </div>
     </div>
+
     <div class="form-group">
       <label for="inputEmail" class="col-lg-2 control-label">Email</label>
       <div class="col-lg-10">
         <input type="text" class="form-control" id="inputEmail" placeholder="Email">
       </div>
+
     </div>
     <div class="form-group">
       <label for="inputPassword" class="col-lg-2 control-label">Password</label>
@@ -34,6 +37,9 @@
         </div>
       </div>
     </div>
+    <%= f.label :Password %>
+    <%= f.input :password, placeholder: 'Password' %>
+
     <div class="form-group">
       <label for="textArea" class="col-lg-2 control-label">Textarea</label>
       <div class="col-lg-10">
@@ -41,6 +47,7 @@
         <span class="help-block">A longer block of help text that breaks onto a new line and may extend beyond one line.</span>
       </div>
     </div>
+
     <div class="form-group">
       <div class="col-lg-10 col-lg-offset-2">
         <button type="reset" class="btn btn-default">Cancel</button>
