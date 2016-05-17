@@ -3,6 +3,15 @@
 <%= link_to "Upload Image", new_picture_path, class:"btn btn-default" %>
 
 
-<% @pictures.each do |picture| %>
-<%= cl_image_tag(picture.pic_img_url) %>
-<% end %>
+
+<article class="index-1 col-md-10 col-md-offset-1">
+  <div class="row">
+    <% @pictures.each do |picture| %>
+        <section class="teaser col-md-4">
+          <h5>Images</h5>
+          <a href="http://localhost:3000/pictures/<%= picture.id %>"><img src="<%= picture.pic_img_url %>" class="img-responsive"></a>
+
+        </section>
+    <% end %>
+  </div>
+</article>

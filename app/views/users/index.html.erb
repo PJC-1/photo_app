@@ -4,36 +4,11 @@
 
 <article class="index-1 col-md-10 col-md-offset-1">
   <div class="row">
-    <section class="teaser col-md-4">
-      <h5>Images</h5>
-      <%= image_tag "default-placeholder.png", size:"260x200" %>
-    </section>
-
-    <section class="teaser col-md-4">
-      <h5>Images</h5>
-      <%= image_tag "default-placeholder.png", size:"260x200" %>
-    </section>
-
-    <section class="teaser col-md-4">
-      <h5>Images</h5>
-      <%= image_tag "default-placeholder.png", size:"260x200" %>
-    </section>
+    <% @pictures.each do |picture| %>
+        <section class="teaser col-md-4">
+          <h5>Images</h5>
+          <%= cl_image_tag(picture.pic_img_url) %>
+        </section>
+    <% end %>
   </div>
-
-  <div class="row">
-    <section class="teaser col-md-4">
-      <h5>Images</h5>
-      <%= image_tag "default-placeholder.png", size:"260x200" %>
-    </section>
-
-    <section class="teaser col-md-4">
-      <h5>Images</h5>
-      <%= image_tag "default-placeholder.png", size:"260x200" %>
-    </section>
-
-    <section class="teaser col-md-4">
-      <h5>Images</h5>
-      <%= image_tag "default-placeholder.png", size:"260x200" %>
-    </section>
-  </div>
-</div>
+</article>
