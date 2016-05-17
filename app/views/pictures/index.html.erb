@@ -1,12 +1,18 @@
 <h1>Picture#index</h1>
 <br>
-<%= link_to "Upload Image", new_picture_path, class:"btn btn-default" %>
-<br>
-
-<div id="picz" class="transitions-enabled">
-  <% @pictures.each do |picture| %>
+<div class="container">
+  <div class="text-center">
+    <div id="upload-img">
+      <%= link_to "UPLOAD AN IMAGE", new_picture_path, class:"btn btn-default" %>
+    </div>
+  </div>
+  <br>
+  <br>
+  <div id="picz" class="transitions-enabled">
+    <% @pictures.each do |picture| %>
     <div class="box">
       <%= link_to cl_image_tag(picture.pic_img_url), "/pictures/#{picture.id}" %>
     </div>
-  <% end %>
+    <% end %>
+  </div>
 </div>

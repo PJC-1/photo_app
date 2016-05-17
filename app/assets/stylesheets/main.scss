@@ -9,14 +9,14 @@
   color: white;
 }
 
-#navbar {
+.navbar {
   margin-top: 5px;
   /* top | right | bottom | left */
   padding: 0 1em 0 1em;
 }
 
 .navbar {
-  border-bottom: 1px solid #dbdbdb;
+  border-bottom: 0px solid #dbdbdb;
   margin-bottom: 0px;
 }
 .navbar a {
@@ -37,7 +37,6 @@
   border-radius: 5px;
   display: block;
   margin-bottom: 22px;
-  max-width: 100%
 }
 
 .glyphicon {
@@ -75,4 +74,12 @@ margin-bottom: 40px;
 
 .profile-info {
   padding-top: 55px;
+}
+
+
+#upload-img .btn {
+  margin-right: 25px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+
 }

@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   get 'user/index'
 
   #Devise routes
-  devise_for :users
+  devise_for :users, :controllers => { registrations: 'registrations' }
   root to: "users#index"
 
   # User/Picture resource
