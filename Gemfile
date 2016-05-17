@@ -62,7 +62,9 @@ gem 'bootswatch-rails'
 # masonry-gem, works with jqry masonry
 gem 'masonry-rails'
 
-
+group :production do
+  gem 'rails_12factor'
+end
 
 
 
