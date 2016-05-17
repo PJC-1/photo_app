@@ -6,14 +6,14 @@ class UsersController < ApplicationController
   # GET /users.json
   def index
     @users = User.all
-    @pictures = Picture.all
+    @pictures = Picture.paginate(:page => params[:page], :per_page => 6)
   end
 
   # # GET /users/1
   # # GET /users/1.json
   def show
     @user = User.find(params[:id])
-    @pictures = @user.pictures
+    @pictures = @user.pictures.paginate(:page => params[:page], :per_page => 6)
     if @user == current_user
       render :show
     else
