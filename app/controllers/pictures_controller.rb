@@ -16,7 +16,7 @@ class PicturesController < ApplicationController
 
     def create
       @picture = Picture.create(picture_params)
-      Cloudinary::Uploader.upload(params[:picture][:pic_img])
+      Cloudinary::Uploader.unsigned_upload(params[:picture][:pic_img])
       current_user.pictures << @picture
       redirect_to pictures_path
     end
