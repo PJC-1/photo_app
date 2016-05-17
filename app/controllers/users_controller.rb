@@ -26,6 +26,7 @@ class UsersController < ApplicationController
     @user = User.find_by_id(params[:id])
     if current_user == @user
       render :edit
+      redirect_to user_path(@user)
     else
       redirect_to users_path
     end
