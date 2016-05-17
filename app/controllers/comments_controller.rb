@@ -35,7 +35,7 @@ class CommentsController < ApplicationController
 
   def edit
     @picture = Picture.find(params[:picture_id])
-    @comment = @picture.comments.find(params[:comment_id])
+    @comment = @picture.comments.find(params[:id])
     if current_user == @comment.user
       render :edit
     else
@@ -46,10 +46,10 @@ class CommentsController < ApplicationController
 
   def update
     @picture = Picture.find(params[:picture_id])
-    @comment = Comment.find(params[:comment_id])
+    @comment = Comment.find(params[:id])
     @comment.update(comment_params)
     flash[:notice] = "Comment succesfully updated!"
-    redirect_to root_path
+    redirect_to picture_path(@picture)
   end
 
   def destroy

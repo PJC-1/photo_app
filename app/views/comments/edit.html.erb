@@ -3,9 +3,9 @@
   <div class="form-group">
     <%= form_for [@picture,@comment] do |f| %>
       <div>
-        <%= f.text_area :body, placeholder: "Comment Body", size:"60x10", class:"form-control" %>
+        <%= f.text_area :post, placeholder: "Comment Body", size:"60x10", class:"form-control" %>
       </div>
-      <%= f.submit "Submit", formaction:comment_update_path(@picture,@comment), class:"btn btn-primary" %>
+      <%= f.submit "Submit", formaction:"/pictures/#{@picture.id}/comments/#{@comment.id}", class:"btn btn-primary" %>
     <% end %>
   </div>
 </div>
