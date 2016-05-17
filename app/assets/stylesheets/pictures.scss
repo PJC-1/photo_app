@@ -1,3 +1,24 @@
 // Place all the styles related to the pictures controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#picz {
+  margin: 0 auto;
+}
+
+.box {
+  margin: 5px;
+  width: 214px;
+}
+
+.box img {
+  width: 100%;
+}
+
+.picture-container {
+  .img-responsive {
+    width: 700px;
+    height: 750px;
+    margin: 0 auto;
+  }
+}

@@ -13,17 +13,16 @@
           <%= link_to "Edit Profile", edit_user_registration_path, class:"btn btn-primary" %>
           <%= link_to "Upload Image", new_picture_path, class:"btn btn-default" %>
         </div>
-      </header>
-
-      <article class="index-1 col-md-10 col-md-offset-1">
-        <div class="row">
-          <% @pictures.each do |picture| %>
-            <section class="teaser col-md-4">
-              <%= cl_image_tag(picture.pic_img_url) %>
-            </section>
-          <% end %>
-        </div>
-      </article>
     </article>
   </main>
 </section>
+<div id="picz" class="transitions-enabled">
+  <% @pictures.each do |picture| %>
+    <div class="box">
+      <a href="http://localhost:3000/pictures/<%= picture.id %>"><img src="<%= picture.pic_img_url %>"></a>
+    </div>
+  <% end %>
+</div>
+<div class="col-md-6">
+  <%= will_paginate @pictures %>
+</div>
