@@ -49,6 +49,7 @@ gem 'cloudinary'
 
 # Show number of items per pages
 gem 'will_paginate', '~> 3.1.0'
+gem 'bootswatch-rails'
 
 #works with cloundinary
 # gem 'rmagick'
