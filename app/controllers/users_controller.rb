@@ -15,7 +15,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @pictures = @user.pictures.paginate(:page => params[:page], :per_page => 6)
     if @user == current_user
-      render :show
+
     else
       redirect_to users_path
     end
@@ -31,6 +31,12 @@ class UsersController < ApplicationController
       redirect_to users_path
     end
   end
+
+  def create
+    @user = User.find_by_id(params[:id])
+    Cloudinary::Uploader.upload(user_params)
+  end
+
 
   # # PATCH/PUT /users/1
   # # PATCH/PUT /users/1.json
@@ -54,7 +60,7 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:first_name, :last_name, :email, :password)
+      params.require(:user).permit(:first_name, :last_name, :email, :password, :profile_picture)
     end
 
 end
