@@ -1,7 +1,11 @@
 class PicturesController < ApplicationController
 
     def index
-      @pictures = Picture.all
+      if params[:tag]
+        @pictures = Picture.tagged_with(params[:tag])
+      else
+        @pictures = Picture.all
+      end
     end
 
     def new
@@ -10,7 +14,7 @@ class PicturesController < ApplicationController
 
     def show
       @picture = Picture.find_by_id(params[:id])
-      @comments = @picture.comments
+      @comments = @picture.comments.order("created_at DESC")
       @user = current_user
     end
 
@@ -20,6 +24,7 @@ class PicturesController < ApplicationController
       current_user.pictures << @picture
       redirect_to pictures_path
     end
+
 
     def destroy
       @user = User.find_by_id(params[:id])
@@ -33,9 +38,15 @@ class PicturesController < ApplicationController
       end
     end
 
+    def upvote
+      @picture = Picture.find(params[:id])
+      @picture.upvote_by current_user
+      redirect_to :back
+    end
+
     private
     def picture_params
-      params.require(:picture).permit(:pic_img)
+      params.require(:picture).permit(:pic_img, :title, :tag_list)
     end
 
     def user_params
