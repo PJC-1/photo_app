@@ -1,9 +1,9 @@
-
-<br>
 <div class="container">
   <div class="text-center">
     <div id="upload-img">
-      <%= link_to "UPLOAD AN IMAGE", new_picture_path, class:"btn btn-default" %>
+      <%= button_to new_picture_path, method: :get, class: "btn btn-large btn-trans" do %>
+        <span class="glyphicon glyphicon-camera">
+      <% end %>
     </div>
   </div>
   <br>

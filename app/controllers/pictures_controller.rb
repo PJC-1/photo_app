@@ -14,7 +14,7 @@ class PicturesController < ApplicationController
 
     def show
       @picture = Picture.find_by_id(params[:id])
-      @comments = @picture.comments
+      @comments = @picture.comments.order("created_at DESC")
       @user = current_user
     end
 
@@ -36,6 +36,12 @@ class PicturesController < ApplicationController
         flash[:notice]="You are not authorized to delete this picture!"
         redirect_to user_path(current_user)
       end
+    end
+
+    def upvote
+      @picture = Picture.find(params[:id])
+      @picture.upvote_by current_user
+      redirect_to :back
     end
 
     private
