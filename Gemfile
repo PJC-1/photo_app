@@ -54,17 +54,13 @@ gem 'cloudinary'
 # Show number of items per pages
 gem 'will_paginate', '~> 3.1.0'
 gem 'bootswatch-rails'
-
+gem 'acts_as_votable', '~> 0.10.0'
 #works with cloundinary
 # gem 'rmagick'
 
 
 # masonry-gem, works with jqry masonry
 gem 'masonry-rails'
-
-
-
-
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

@@ -23,6 +23,12 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :pictures do
+    member do
+      put "like", to: "pictures#upvote"
+    end
+  end
+
 end
 #
 # Prefix Verb   URI Pattern                                       Controller#Action

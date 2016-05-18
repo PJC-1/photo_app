@@ -33,6 +33,12 @@ class PicturesController < ApplicationController
       end
     end
 
+    def upvote
+      @picture = Picture.find(params[:id])
+      @picture.upvote_by current_user
+      redirect_to :back
+    end
+
     private
     def picture_params
       params.require(:picture).permit(:pic_img)
