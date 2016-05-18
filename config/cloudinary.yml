@@ -1,7 +1,7 @@
 development:
   cloud_name: photo-app
   api_key: <%= ENV["cloud_key"] %>
-  api_secret: <%= ENV["cloud_key"] %>
+  api_secret: <%= ENV["cloud_secret"] %>
   enhance_image_tag: true
   static_image_support: false
 production:

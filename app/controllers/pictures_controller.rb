@@ -2,9 +2,9 @@ class PicturesController < ApplicationController
 
     def index
        if params[:search]
-         @pic = Picture.search(params[:tag])
+         @pic = Picture.search(params[:tag]).paginate(:page => params[:page], :per_page => 6)
        elsif params[:tag]
-         @pictures = Picture.tagged_with(params[:tag])
+         @pictures = Picture.tagged_with(params[:tag]).paginate(:page => params[:page], :per_page => 6)
        else
          @pictures = Picture.paginate(:page => params[:page], :per_page => 6)
        end
