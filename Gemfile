@@ -76,6 +76,11 @@ end
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# rspec-rails
+group :development, :test do
+ gem 'rspec-rails'
+end
+
 group :development do
   gem 'rails-erd'
 end
