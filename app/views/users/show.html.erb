@@ -3,10 +3,20 @@
     <article class="profile-1">
       <header class="bio-info">
         <div class="profile-img">
-          <h3><%= @user.first_name %>'s Profile</h3>
-          <h3><%= @user.email %>'s Profile</h3>
-          <%= image_tag "default-placeholder.png", size:"260x200" %>
+          <%= cl_image_tag(@user.profile_picture.url, :transformation=>[
+           {:width=>400, :height=>400, :gravity=>"face", :radius=>"max", :crop=>"crop",},
+           {:width=>200}])%>
+
+          <%= form_for @user do |f| %>
+          <%= f.file_field :profile_picture %>
+          <%= f.hidden_field(:profile_picture_cache) %>
+          <%= f.submit "Submit" %>
+          <% end %>
         </div>
+
+          <h3><%= @user.first_name %>'s Profile</h3><br>
+          <br>
+          <h3><%= @user.email %>'s Profile</h3>
         <div class="profile-info">
           <p><strong>First Name: </strong><%= @user.first_name %></p>
           <p><strong>Last Name: </strong><%= @user.last_name %></p>
