@@ -3,9 +3,7 @@
     <article class="profile-1">
       <header class="bio-info">
         <div class="profile-img">
-          <%= cl_image_tag(@user.profile_picture.url, :transformation=>[
-           {:width=>400, :height=>400, :gravity=>"face", :radius=>"max", :crop=>"crop",},
-           {:width=>200}])%>
+          <%= cl_image_tag(@user.profile_picture.url, :width=>110, :height=>110, :gravity=>"face", :crop=>"crop")%>
 
           <%= form_for @user do |f| %>
           <%= f.file_field :profile_picture %>
