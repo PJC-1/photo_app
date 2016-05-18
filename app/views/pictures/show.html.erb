@@ -1,8 +1,9 @@
 <div class="index-1 col-md-8 col-md-offset-2">
   <div class="panel panel-default teaserShow">
     <div class="panel-heading">
-      <%= @picture.title %>
       <%= cl_image_tag(@picture.pic_img_url, :height => 450, class:"img-responsive" , :crop => :fill, :fetch_format => :auto) %>
+      <%= cl_image_tag(@user.profile_picture.url, :width => 25, :height => 25)%>
+      <strong><%= @picture.title %></strong>
     </div>
     <div class="panel-body">
       <strong><th><%= @picture.user.first_name %></th></strong>
@@ -28,7 +29,7 @@
       <div class="row">
         <div class="col-md-6">
           <%= link_to like_picture_path(@picture), method: :put, class:"btn btn-default" do %>
-            <div class="glyphicon glyphicon-heart"></div>
+          <div class="glyphicon glyphicon-heart"></div>
             <%= @picture.get_upvotes.size %>
             <strong>tags: </strong><%= raw @picture.tags.map(&:name).map { |t| link_to t, tag_pictures_path(t) }.join(', ') %>
           <% end %>
