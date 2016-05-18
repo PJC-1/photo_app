@@ -6,6 +6,7 @@
       <strong>tags: </strong><%= raw @picture.tags.map(&:name).map { |t| link_to t, tag_pictures_path(t) }.join(', ') %>
     </div>
     <div class="panel-body">
+      <%= @picture.title %>
       <strong><th><%= @picture.user.first_name %></th></strong>
       <% @comments.each do |c| %></h4>
         <table class="table table-striped">
