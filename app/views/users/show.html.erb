@@ -1,28 +1,27 @@
 <section class="profile-layout">
-  <main class="layout layout-1">
-    <article class="profile-1">
-      <header class="bio-info">
-        <div class="profile-img">
-          <%= cl_image_tag(@user.profile_picture.url, :width=>110, :height=>110, :gravity=>"face", :crop=>"crop")%>
-
-          <%= form_for @user do |f| %>
-          <%= f.file_field :profile_picture %>
-          <%= f.hidden_field(:profile_picture_cache) %>
-          <%= f.submit "Submit" %>
-          <% end %>
-        </div>
-
-          <h3><%= @user.first_name %>'s Profile</h3><br>
-          <br>
-          <h3><%= @user.email %>'s Profile</h3>
-        <div class="profile-info">
-          <p><strong>First Name: </strong><%= @user.first_name %></p>
-          <p><strong>Last Name: </strong><%= @user.last_name %></p>
+  <header class="row bio-info">
+    <div class="col-md-6">
+      <div class="profile-img">
+        <%= cl_image_tag(@user.profile_picture.url, :width=>180, :height=>180, :gravity=>"face", :radius=>"max", :crop=>"crop") %>
+        <%= form_for @user do |f| %>
+        <%= f.file_field :profile_picture %>
+        <%= f.hidden_field(:profile_picture_cache) %>
+        <%= f.submit "Submit" %>
+        <% end %>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="profile-name-follow">
+        <h4><%= @user.first_name %></h4>
+        <p><strong>First Name: </strong><%= @user.first_name %></p>
+        <p><strong>Last Name: </strong><%= @user.last_name %></p>
+        <div class="profile-name">
           <%= link_to "Edit Profile", edit_user_registration_path, class:"btn btn-primary" %>
           <%= link_to "Upload Image", new_picture_path, class:"btn btn-default" %>
         </div>
-    </article>
-  </main>
+      </div>
+    </div>
+  </header>
 </section>
 <div id="picz" class="transitions-enabled">
   <% @pictures.each do |picture| %>
@@ -31,6 +30,6 @@
     </div>
   <% end %>
 </div>
-<div class="col-md-6">
+<div class="next-page text-center">
   <%= will_paginate @pictures %>
 </div>

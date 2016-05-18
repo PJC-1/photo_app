@@ -6,7 +6,6 @@ class UsersController < ApplicationController
   # GET /users.json
   def index
     @users = User.all
-    @pictures = Picture.paginate(:page => params[:page], :per_page => 6)
   end
 
   # # GET /users/1
@@ -14,11 +13,6 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @pictures = @user.pictures.paginate(:page => params[:page], :per_page => 6)
-    if @user == current_user
-
-    else
-      redirect_to users_path
-    end
   end
 
   # GET /users/1/edit

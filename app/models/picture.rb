@@ -30,4 +30,8 @@ class Picture < ActiveRecord::Base
     end
   end
 
+  def self.search(query)
+    where("tag like ?", "%#{query}%")
+  end
+
 end

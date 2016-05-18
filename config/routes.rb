@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'about/index'
+
   get 'user/index'
 
   #Devise routes
@@ -28,6 +30,7 @@ Rails.application.routes.draw do
       put "like", to: "pictures#upvote"
     end
   end
+
 
 end
 #
