@@ -1,23 +1,34 @@
-<div id='backend_upload'>
-  <h1>New Photo</h1>
-  <h2>Image file is uploaded through the server</h2>
-  <%= form_for(@picture, :url => pictures_path) do |f| %>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4 col-sm-offset-4">
+      <div class="light-well">
+        <h2 class="page-header text-center">Upload a New Photo</h2>
 
-    <div class="form_line">
-      <%= f.label :pic_img, "Image:" %>
-      <div class="form_controls">
-        <%= f.file_field :pic_img %>
-        <%= f.label :title %>
-        <%= f.text_field :title %><br />
-        <%= f.hidden_field(:pic_img_cache) %>
-        <%= f.label :tag_list %>
-        <%= f.text_field :tag_list %>
+          <%= form_for(@picture, :url => pictures_path) do |f| %>
+
+            <div class="form-group">
+              <%= f.file_field :pic_img, class: "form-control" %>
+            </div>
+
+            <div class="form-group">
+              <%= f.text_field :title, placeholder: "Enter Title", class: "form-control" %>
+            </div>
+
+            <div class="form-group">
+              <%= f.hidden_field(:pic_img_cache) %>
+            </div>
+
+            <div class="form-group">
+              <%= f.text_field :tag_list, placeholder: "Enter tags separated by a coma", class: "form-control" %>
+            </div>
+
+            <div class="actions">
+              <%= f.submit "Submit Photo", class: "btn btn-success btn-ls btn-block" %>
+            </div>
+
+          <% end %>
+
       </div>
     </div>
-    <div class="form_line">
-      <div class="form_controls">
-        <%= f.submit "Submit Photo" %>
-      </div>
-    </div>
-  <% end %>
+  </div>
 </div>
