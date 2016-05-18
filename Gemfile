@@ -62,6 +62,11 @@ gem 'acts_as_votable', '~> 0.10.0'
 # masonry-gem, works with jqry masonry
 gem 'masonry-rails'
 
+group :production do
+  gem 'rails_12factor'
+end
+
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
