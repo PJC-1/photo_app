@@ -1,0 +1,18 @@
+development:
+  cloud_name: photo-app
+  api_key: '971867482615178'
+  api_secret: uC84bs9Aw5aCJYK91CM_AzZnCYU
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: photo-app
+  api_key: '971867482615178'
+  api_secret: uC84bs9Aw5aCJYK91CM_AzZnCYU
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: photo-app
+  api_key: '971867482615178'
+  api_secret: uC84bs9Aw5aCJYK91CM_AzZnCYU
+  enhance_image_tag: true
+  static_image_support: false

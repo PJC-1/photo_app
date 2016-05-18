@@ -19,7 +19,7 @@ Rails.application.routes.draw do
 
     # Search tags
     collection do
-      get "/tags" => "pictures#tags_search"
+      get "/tags/:tag", to: "pictures#index", as: "tag"
     end
   end
 

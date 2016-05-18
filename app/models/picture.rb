@@ -7,7 +7,7 @@ class Picture < ActiveRecord::Base
   has_many :tags, through: :picture_tags
 
   # returns pictures with that tag name
-  def self.tagged_wtih(name)
+  def self.tagged_with(name)
     Tag.find_by_name!(name).pictures
   end
 
