@@ -1,10 +1,20 @@
 class PicturesController < ApplicationController
 
     def index
-      if params[:tag]
-        @pictures = Picture.tagged_with(params[:tag])
+     if params[:search]
+       @pic = Picture.search(params[:tag])
+     elsif params[:tag]
+       @pictures = Picture.tagged_with(params[:tag])
+     else
+       @pictures = Picture.paginate(:page => params[:page], :per_page => 6)
+     end
+    end
+
+    def self.search(search)
+      if search.present?
+        where('name LIKE ?', "%#{search}%")
       else
-        @pictures = Picture.all
+        where(true)
       end
     end
 
@@ -52,5 +62,6 @@ class PicturesController < ApplicationController
     def user_params
       params.require(:user).permit(:first_name, :last_name, :email, :password)
     end
+
 
 end
