@@ -58,7 +58,6 @@ gem 'acts_as_votable', '~> 0.10.0'
 #works with cloundinary
 # gem 'rmagick'
 
-
 # masonry-gem, works with jqry masonry
 gem 'masonry-rails'
 
@@ -79,7 +78,10 @@ end
 # rspec-rails
 group :development, :test do
  gem 'rspec-rails'
+ gem 'shoulda-matchers'
 end
+
+
 
 group :development do
   gem 'rails-erd'
