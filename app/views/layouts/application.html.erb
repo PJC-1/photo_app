@@ -21,17 +21,16 @@
       </div>
       <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav pull-right">
+          <li>
+            <%= form_tag(pictures_path, :method => "get", id: "search-form") do %>
+            <%= text_field_tag :tag, params[:tag], placeholder: "Search For Tags" %>
+            <%= submit_tag "Search", :name => nil %>
+            <% end %>
+          </li>
           <% if user_signed_in? %>
             <li><%= link_to "Profile", user_path(current_user) %></li>
             <li><%= link_to "News Feed", pictures_path %></li>
             <li><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
-            <li>
-              <%= form_tag(pictures_path, :method => "get", id: "search-form") do %>
-              <%= text_field_tag :tag, params[:tag], placeholder: "Search For Tags" %>
-              <%= submit_tag "Search", :name => nil %>
-              <% end %>
-            </li>
-
         </ul>
         <% else %>
           <ul class="nav navbar-nav pull-right">
