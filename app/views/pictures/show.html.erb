@@ -1,6 +1,7 @@
 <div class="index-1 col-md-8 col-md-offset-2">
   <div class="panel panel-default teaserShow">
     <div class="panel-heading">
+      <%= @picture.title %>
       <%= cl_image_tag(@picture.pic_img_url, :height => 450, class:"img-responsive" , :crop => :fill, :fetch_format => :auto) %>
     </div>
     <div class="panel-body">
