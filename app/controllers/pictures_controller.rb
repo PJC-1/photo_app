@@ -10,7 +10,7 @@ class PicturesController < ApplicationController
 
     def show
       @picture = Picture.find_by_id(params[:id])
-      @comments = @picture.comments
+      @comments = @picture.comments.order("created_at DESC")
       @user = current_user
     end
 
