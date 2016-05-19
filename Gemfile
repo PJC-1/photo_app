@@ -14,10 +14,12 @@ gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
+gem 'pry-rails'
 
 # Bootstrap
 gem 'bootstrap-sass', '~> 3.3.6'
 
+gem "bower-rails", "~> 0.10.0"
 
 
 # Use jquery as the JavaScript library
@@ -58,7 +60,6 @@ gem 'acts_as_votable', '~> 0.10.0'
 #works with cloundinary
 # gem 'rmagick'
 
-
 # masonry-gem, works with jqry masonry
 gem 'masonry-rails'
 
@@ -79,7 +80,10 @@ end
 # rspec-rails
 group :development, :test do
  gem 'rspec-rails'
+ gem 'shoulda-matchers'
 end
+
+
 
 group :development do
   gem 'rails-erd'

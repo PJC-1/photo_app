@@ -13,6 +13,11 @@
 
 .box img {
   width: 100%;
+  box-shadow: 2px 2px 2px #888888;
+  -webkit-box-shadow: 2px 2px 2px #888888;
+}
+.box img:hover{
+  opacity: 0.6;
 }
 .user-img {
   border-radius: 50%;
@@ -36,8 +41,9 @@
 #upload-img .glyphicon {
   font-size: 50px;
 }
-
-
+.user {
+  padding-bottom: 30px;
+}
 .red-glif{
   color: red;
 }
@@ -54,7 +60,14 @@
   float: right;
   margin: 20px auto;
   border-radius: 80%;
-  // height: 152px;
-  //width: 0px;
+}
 
+.card-img-top{
+  margin: auto;
+}
+#profile-picture, #profile-firstname {
+  display: inline;
+}
+.icon-2 {
+  padding-right: 45px;
 }

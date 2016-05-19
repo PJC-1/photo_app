@@ -1,10 +1,76 @@
-<h1>PLEASE STYLE THIS ABOUT PAGE</h1>
 <br>
 <br>
-<p><strong>Developers:</strong></p>
-<ol>
-  <li>Adam</li>
-  <li>Marcelo</li>
-  <li>Herman</li>
-  <li>Phill</li>
-</ol>
+<div class="col-md-6 col-md-offset-3">
+  <div class="group-picture">
+    <h1 class="teamheader">MEET THE TEAM</h1>
+    <%= image_tag 'http://res.cloudinary.com/photo-app/image/upload/v1463686094/Group-picture_lz0u5x.jpg' , alt: 'group-picture', class:'img-responsive', width: 800, height: 800 %>
+  </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<div class="container text-center col-md-12">
+  <div class="card-deck-wrapper">
+    <div class="card-deck row">
+
+      <div class="card col-md-3">
+        <img class="card-img-top aboutpic" src="https://avatars1.githubusercontent.com/u/17155244?v=3&s=460" alt="Card image cap">
+        <div class="card-block">
+          <h4 class="card-title">Phill</h4>
+          <p class="card-text">Coding to make my world a better place.</p>
+          <p>I heart puppies, cooking, photo, and hiking.</p>
+          <br>
+
+        </div>
+      </div>
+
+      <div class="card col-md-3">
+        <img class="card-img-top aboutpic" src="https://avatars0.githubusercontent.com/u/11340703?v=3&s=460" alt="Card image cap">
+        <div class="card-block">
+          <h4 class="card-title">Marcelo</h4>
+          <p class="card-text">I don't always drink beer, but when I do, I perfer Dos Equis.</p>
+          <p>Most Interesting Man in the World.</p>
+          <br>
+
+        </div>
+      </div>
+
+      <div class="card col-md-3 ">
+        <img class="card-img-top aboutpic" src="https://avatars0.githubusercontent.com/u/17344073?v=3&s=460" alt="Card image cap">
+        <div class="card-block">
+          <h4 class="card-title">Adam</h4>
+          <p class="card-text">Web developer in the making.</p>
+          <p>CEO of Piped Piper.</p>
+          <br>
+
+        </div>
+      </div>
+
+      <div class="card col-md-3">
+        <img class="card-img-top aboutpic" src="https://avatars1.githubusercontent.com/u/11309303?v=3&s=460" alt="Card image cap">
+        <div class="card-block">
+          <h4 class="card-title">Herman</h4>
+          <p class="card-text">Web developer in the making.</p>
+          <p>Coffee makes me jittery.</p>
+           <br>
+
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="logos col-md-3">
+        <p><%= link_to(image_tag("linkedin.png", :alt => "logo", :title => "LinkedIn"), "https://www.linkedin.com/in/phillbertcheng") %><%= link_to(image_tag("github.png", :alt => "logo", :title => "Github"), "https://github.com/PJC-1") %></p>
+      </div>
+      <div class="col-md-3">
+        <p><%= link_to(image_tag("linkedin.png", :alt => "logo", :title => "LinkedIn"), "https://www.linkedin.com/in/marceloleon") %><%= link_to(image_tag("github.png", :alt => "logo", :title => "Github"), "https://github.com/Mleon195") %></p>
+      </div>
+      <div class="col-md-3">
+        <p><%= link_to(image_tag("linkedin.png", :alt => "logo", :title => "LinkedIn"), "https://www.linkedin.com/in/adamrobertreid") %><%= link_to(image_tag("github.png", :alt => "logo", :title => "Github"), "https://github.com/adamrobertreid") %></p>
+      </div>
+      <div class="col-md-3">
+        <p><%= link_to(image_tag("linkedin.png", :alt => "logo", :title => "LinkedIn"), "https://www.linkedin.com/in/hermchan") %><%= link_to(image_tag("github.png", :alt => "logo", :title => "Github"), "https://github.com/hermchan") %></p>
+      </div>
+    </div>
+  </div>
+</div>

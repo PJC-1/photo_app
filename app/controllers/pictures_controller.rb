@@ -1,15 +1,15 @@
 class PicturesController < ApplicationController
 
     def index
+
        if params[:search]
-         @pic = Picture.search(params[:tag]).paginate(:page => params[:page], :per_page => 6)
+         @pic = Picture.search(params[:tag]).all.shuffle.paginate(:page => params[:page], :per_page => 6)
        elsif params[:tag]
-         @pictures = Picture.tagged_with(params[:tag]).paginate(:page => params[:page], :per_page => 6)
+         @pictures = Picture.tagged_with(params[:tag]).all.shuffle.paginate(:page => params[:page], :per_page => 6)
        else
-         @pictures = Picture.paginate(:page => params[:page], :per_page => 6)
+         @pictures = Picture.all.shuffle.paginate(:page => params[:page], :per_page => 9)
        end
     end
-
 
     def new
       @picture = Picture.new

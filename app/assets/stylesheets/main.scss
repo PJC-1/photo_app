@@ -46,7 +46,7 @@
   margin-bottom:0;
 }
 .layout, .layout.layout-1{
-  background-color: #fafafa;
+  background-color: #ffffff;
 }
 
 .img-display .img-1 .a {
@@ -67,7 +67,6 @@ img {
   width: 250px;
   height: auto;
   padding: 10px;
-
 }
 
 
@@ -78,8 +77,6 @@ img {
   display: block;
   text-align: left;
   padding-left: 15px;
-
-
 }
 
 
@@ -88,18 +85,30 @@ img {
   float: left;
   background-color: blue;
   position: relative;
-
-
 }
 
 
 .profile-name-follow{
   float:left;
   position: relative;
-
 }
 
 .logo-small {
     color: black;
     font-size: 50px;
+}
+.items .profile {
+   display: inline-block;
+   position: relative;
+   background: #000;
+   width: 260px;
+}
+
+
+.aboutpic{
+  border-radius: 50%;
+  width: 300px;
+  height: auto;
+  box-shadow: 2px 2px 2px #888888;
+  -webkit-box-shadow: 2px 2px 2px #888888;
 }
