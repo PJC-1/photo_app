@@ -56,33 +56,42 @@
   padding: 0px;
   vertical-align: baseline;
 }
-img {
-  width: 300px;
+.profile{
+  height: auto;
+  position: relative;
+  display:inline-grid;
   height: 300px;
-  
+}
+
+img {
+  width: 250px;
+  height: auto;
+  padding: 10px;
+
 }
 
 .bio-info {
   box-sizing: border-box;
   margin: 0;
   margin-left: 15px;
-  display: block;;
+  display: block;
   text-align: left;
-  padding-left: 5px;
-  border: 1px solid black;
+  padding-left: 15px;
+
+
 }
 
 .profile-info {
-  padding-top: 55px;
-  float: right;
-  display: inline-block;
+  padding-top: 15px;
+  float: left;
   background-color: blue;
+  position: relative;
 
 }
 
 .profile-name-follow{
   float:left;
-  display: inline-block;
+  position: relative;
 }
 
 .logo-small {

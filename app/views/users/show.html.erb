@@ -1,9 +1,11 @@
 <section class="profile-layout">
   <header class="row bio-info">
+   </header>
+  <section class="profile">
     <div class="col-sm-6">
       <div class="profile-img">
         <%= cl_image_tag(@user.profile_picture.url, :width=>180, :height=>180, :gravity=>"face", :radius=>"max", :crop=>"crop") %>
-      </div>
+
       <span style="vertical-align:middle">
         <%= form_for @user do |f| %>
         <%= f.file_field :profile_picture %>
@@ -12,6 +14,7 @@
         <% end %>
       </span>
     </div>
+  </div>
 
     <div class="col-sm-6">
         <div class="profile-name-follow">
@@ -24,8 +27,9 @@
           </div>
         </div>
     </div>
-  </header>
+
 </section>
+
 <div id="picz" class="transitions-enabled">
   <% @pictures.each do |picture| %>
     <div class="box">
