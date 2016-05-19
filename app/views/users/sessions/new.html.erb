@@ -18,9 +18,6 @@
             <%= f.password_field :password, autocomplete: "off", placeholder: "Enter Password", required: false, class: "form-control" %>
           </div>
 
-          <div class="form-group">
-            <%= f.check_box :remember_me, as: :boolean if devise_mapping.rememberable? %>
-          </div>
           <div class="form-actions">
             <%= f.button :submit, class:"btn btn-primary btn-lg btn-block" %>
           </div>
