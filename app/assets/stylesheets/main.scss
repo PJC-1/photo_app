@@ -57,22 +57,32 @@
   vertical-align: baseline;
 }
 img {
-margin-right: 107px;
-margin-bottom: 40px;
+  width: 300px;
+  height: 300px;
+  
 }
 
 .bio-info {
-  align-items: stretch;
-  border: 0;
   box-sizing: border-box;
-  position: relative;
   margin: 0;
-  margin-left: 50px;
-  display: flex;
+  margin-left: 15px;
+  display: block;;
+  text-align: left;
+  padding-left: 5px;
+  border: 1px solid black;
 }
 
 .profile-info {
   padding-top: 55px;
+  float: right;
+  display: inline-block;
+  background-color: blue;
+
+}
+
+.profile-name-follow{
+  float:left;
+  display: inline-block;
 }
 
 .logo-small {
