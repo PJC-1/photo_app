@@ -38,8 +38,9 @@
 #upload-img .glyphicon {
   font-size: 50px;
 }
-
-
+.user {
+  padding-bottom: 30px;
+}
 .red-glif{
   color: red;
 }
@@ -60,4 +61,11 @@
 
 .card-img-top{
   margin: auto;
+}
+#profile-picture, #profile-firstname {
+  display: inline;
+}
+
+.icon-2 {
+  padding-right: 45px;
 }
