@@ -19,6 +19,7 @@ gem 'pry-rails'
 # Bootstrap
 gem 'bootstrap-sass', '~> 3.3.6'
 
+gem "bower-rails", "~> 0.10.0"
 
 
 # Use jquery as the JavaScript library

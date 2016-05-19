@@ -1,3 +1,5 @@
+
+
 .jumbotron {
   padding-top: 0;
   padding-bottom: 0;
@@ -46,7 +48,7 @@
   margin-bottom:0;
 }
 .layout, .layout.layout-1{
-  background-color: #fafafa;
+  background-color: #ffffff;
 }
 
 .img-display .img-1 .a {
@@ -78,4 +80,48 @@ margin-bottom: 40px;
 .logo-small {
     color: black;
     font-size: 50px;
+}
+.items .profile {
+   display: inline-block;
+   position: relative;
+   background: #000;
+   width: 260px;
+}
+
+
+.aboutpic{
+  border-radius: 50%;
+  width: 300px;
+  height: auto;
+  box-shadow: 2px 2px 2px #888888;
+  -webkit-box-shadow: 2px 2px 2px #888888;
+}
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #777;
+
+}
+
+footer a {
+  color: #555;
+}
+
+footer a:hover {
+  color: #222;
+}
+
+footer small {
+  float: left;
+}
+
+footer ul {
+  float: center;
+  list-style: none;
+}
+
+footer ul li {
+  float: center;
+  margin-left: 15px;
 }

@@ -13,6 +13,11 @@
 
 .box img {
   width: 100%;
+  box-shadow: 2px 2px 2px #888888;
+  -webkit-box-shadow: 2px 2px 2px #888888;
+}
+.box img:hover{
+  opacity: 0.6;
 }
 
 .picture-container {
@@ -51,5 +56,8 @@
   margin: 20px auto;
   height: 152px;
   width: 0px;
+}
 
+.card-img-top{
+  margin: auto;
 }

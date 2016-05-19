@@ -1,35 +1,35 @@
-<section class="profile-layout">
-  <header class="row bio-info">
-    <div class="col-md-6">
-      <div class="profile-img">
-        <%= cl_image_tag(@user.profile_picture.url, :width=>180, :height=>180, :gravity=>"face", :radius=>"max", :crop=>"crop") %>
-        <%= form_for @user do |f| %>
-        <%= f.file_field :profile_picture %>
-        <%= f.hidden_field(:profile_picture_cache) %>
-        <%= f.submit "Submit" %>
-        <% end %>
-      </div>
-    </div>
-    <div class="col-md-6">
-      <div class="profile-name-follow">
-        <h4><%= @user.first_name %></h4>
-        <p><strong>First Name: </strong><%= @user.first_name %></p>
-        <p><strong>Last Name: </strong><%= @user.last_name %></p>
-        <div class="profile-name">
-          <%= link_to "Edit Profile", edit_user_registration_path, class:"btn btn-primary" %>
-          <%= link_to "Upload Image", new_picture_path, class:"btn btn-default" %>
+  <section class="profile-layout">
+    <header class="row bio-info">
+      <div class="col-md-6">
+        <div class="profile-img">
+          <%= cl_image_tag(@user.profile_picture.url, :width=>180, :height=>180, :gravity=>"face", :radius=>"max", :crop=>"crop") %>
+          <%= form_for @user do |f| %>
+          <%= f.file_field :profile_picture %>
+          <%= f.hidden_field(:profile_picture_cache) %>
+          <%= f.submit "Submit" %>
+          <% end %>
         </div>
       </div>
-    </div>
-  </header>
-</section>
-<div id="picz" class="transitions-enabled">
-  <% @pictures.each do |picture| %>
-    <div class="box">
-      <%= link_to cl_image_tag(picture.pic_img_url), "/pictures/#{picture.id}" %>
-    </div>
-  <% end %>
-</div>
-<div class="next-page text-center">
-  <%= will_paginate @pictures %>
-</div>
+      <div class="col-md-6">
+        <div class="profile-name-follow">
+          <h4><%= @user.first_name %></h4>
+          <p><strong>First Name: </strong><%= @user.first_name %></p>
+          <p><strong>Last Name: </strong><%= @user.last_name %></p>
+          <div class="profile-name">
+            <%= link_to "Edit Profile", edit_user_registration_path, class:"btn btn-primary" %>
+            <%= link_to "Upload Image", new_picture_path, class:"btn btn-default" %>
+          </div>
+        </div>
+      </div>
+    </header>
+  </section>
+  <div id="picz" class="transitions-enabled">
+    <% @pictures.each do |picture| %>
+      <div class="box">
+        <%= link_to cl_image_tag(picture.pic_img_url), "/pictures/#{picture.id}" %>
+      </div>
+    <% end %>
+  </div>
+  <div class="next-page text-center">
+    <%= will_paginate @pictures %>
+  </div>

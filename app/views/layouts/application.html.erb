@@ -21,13 +21,8 @@
         </button>
       </div>
       <div id="navbar" class="navbar-collapse collapse">
-        <ul class="nav navbar-nav pull-right">
-          <li>
-            <%= form_tag(pictures_path, :method => "get", id: "search-form") do %>
-            <%= text_field_tag :tag, params[:tag], placeholder: "Search For Tags" %>
-            <%= submit_tag "Search", :name => nil %>
-            <% end %>
-          </li>
+        <ul class="nav navbar-nav navbar-form pull-right" role="search">
+
           <% if user_signed_in? %>
             <li><%= link_to "Profile", user_path(current_user) %></li>
             <li><%= link_to "News Feed", pictures_path %></li>
@@ -47,11 +42,15 @@
       <p class="alert"><%= alert %></p>
     <%= yield %>
 
-    <div class="modal-footer">
-        <div class="col-md-12 text-center">
-          <%= link_to "Polar Snap", root_path %>&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to "About", "/about/index" %>
-        </div>
-    </div>
 
+    <footer class="footer">
+      <nav>
+        <ul>
+          <li><%= link_to "About",   '#' %></li>
+          <li><%= link_to "Contact", '#' %></li>
+          <li><a href="http://news.railstutorial.org/">News</a></li>
+        </ul>
+      </nav>
+    </footer>
 </body>
 </html>
