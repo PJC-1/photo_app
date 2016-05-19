@@ -12,5 +12,25 @@ RSpec.describe User, type: :model do
     it { should have_many(:comments) }
     it { expect(user).to_not allow_value("DUMMY").for(:email) }
     it { expect(user).to allow_value("foo@bar.com").for(:email) }
+
+    context "when validating an email" do
+      it "should contain an @ symbol" do
+        user.email = "asdf"
+        expect{owner.save!}.to raise_error
+      end
+    end
   end
+
+  describe "#first_name" do
+    it "joins first name and last name" do
+      expect(user.first_name).to eq("Phillbert")
+    end
+  end
+
+  describe "#last_name" do
+    it "joins first name and last name" do
+      expect(user.last_name).to eq("Cheng")
+    end
+  end
+
 end
