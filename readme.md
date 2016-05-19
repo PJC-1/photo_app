@@ -1,4 +1,4 @@
-# Project II - Pola Snap, General Information:
+# Project II - Pola Snap
 ___
 ​
 * **Name**: Pola Snap
@@ -6,11 +6,20 @@ ___
 * **Heroku**: https://polasnap.herokuapp.com/
 ​
 ​
+## **Team**:
+___
+Marcelo Leon
+Herman Chan
+Adam Reid
+Phillbert Cheng
 
-## **Team Work**:
+
+## **Screen Shots**
 ___
 ![alt tag](http://s19.postimg.org/e6lhfihur/image.png)
+
 ![alt tag](http://s19.postimg.org/e7vf8xjoj/image.png)
+
 ![alt tag](http://s19.postimg.org/887o59yw3/image.png)
 
 
