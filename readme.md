@@ -24,7 +24,9 @@ ___
 
 
 
+
 ![alt tag](http://s19.postimg.org/e7vf8xjoj/image.png)
+
 
 
 
@@ -45,7 +47,7 @@ ___
 
 
 * Sprint 3: The user is able to add a like to a picture, a count of how many likes a picture has is shown as a number next to a heart glyphicon. The user can leave comments on pictures and can also edit pre-existing comments. At the picture show page users can also delete pictures that belong to them.
-​___
+​
 ​
 
 
@@ -104,3 +106,9 @@ ___
 ___
 * Groups
 * Downloadable images
+
+
+## **Team Work Revised**:
+___
+
+![alt tag](http://s19.postimg.org/bgc5ibl5v/groupy.jpg)
