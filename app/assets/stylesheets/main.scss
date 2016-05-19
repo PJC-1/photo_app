@@ -1,3 +1,5 @@
+
+
 .jumbotron {
   padding-top: 0;
   padding-bottom: 0;
@@ -85,7 +87,40 @@ margin-bottom: 40px;
    background: #000;
    width: 260px;
 }
-.bg-4 {
-    background-color: #2f2f2f;
-    color: #ffffff;
+
+
+.aboutpic{
+  border-radius: 50%;
+  width: 300px;
+  height: auto;
+  box-shadow: 2px 2px 2px #888888;
+  -webkit-box-shadow: 2px 2px 2px #888888;
+}
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #777;
+}
+
+footer a {
+  color: #555;
+}
+
+footer a:hover {
+  color: #222;
+}
+
+footer small {
+  float: left;
+}
+
+footer ul {
+  float: right;
+  list-style: none;
+}
+
+footer ul li {
+  float: left;
+  margin-left: 15px;
 }

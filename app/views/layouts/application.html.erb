@@ -43,14 +43,18 @@
     <%= yield %>
 
 
-    <footer class="container-fluid bg-4 text-center">
-      <h2 class="text-center">ABOUT US</h2>
- <div class="row">
-   <div class="col-sm-12">
-     <p><span class="glyphicon glyphicon-sunglasses"></span><%= link_to "  About", "/about/index" %></p>
-     <p><span class="glyphicon glyphicon-tent"></span><%= link_to "  About", "/about/index" %></p>
-
-   </div>
+    <footer class="footer">
+      <small>
+        The <a href="http://www.railstutorial.org/">Ruby on Rails Tutorial</a>
+        by <a href="http://www.michaelhartl.com/">Michael Hartl</a>
+      </small>
+      <nav>
+        <ul>
+          <li><%= link_to "About",   '#' %></li>
+          <li><%= link_to "Contact", '#' %></li>
+          <li><a href="http://news.railstutorial.org/">News</a></li>
+        </ul>
+      </nav>
     </footer>
 </body>
 </html>
