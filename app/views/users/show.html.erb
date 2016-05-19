@@ -1,16 +1,21 @@
-  <section class="profile-layout">
-    <header class="row bio-info">
-      <div class="col-md-6">
+<section class="profile-layout">
+  <header class="row bio-info">
+    <section class="profile">
+      <div class="col-sm-6 profile-1">
         <div class="profile-img">
-          <%= cl_image_tag(@user.profile_picture.url, :width=>180, :height=>180, :gravity=>"face", :radius=>"max", :crop=>"crop") %>
-          <%= form_for @user do |f| %>
-          <%= f.file_field :profile_picture %>
-          <%= f.hidden_field(:profile_picture_cache) %>
-          <%= f.submit "Submit" %>
-          <% end %>
+          <%= cl_image_tag(@user.profile_picture.url,:class =>"profile-img", :width=>180, :height=>180, :gravity=>"face", :radius=>"max", :crop=>"crop") %>
+
+          <span style="vertical-align:middle">
+            <%= form_for @user do |f| %>
+            <%= f.file_field :profile_picture %>
+            <%= f.hidden_field(:profile_picture_cache) %>
+            <%= f.submit "Submit" %>
+            <% end %>
+          </span>
         </div>
       </div>
-      <div class="col-md-6">
+
+      <div class="col-sm-6 profile-2">
         <div class="profile-name-follow">
           <h4><%= @user.first_name %></h4>
           <p><strong>First Name: </strong><%= @user.first_name %></p>
@@ -21,15 +26,18 @@
           </div>
         </div>
       </div>
-    </header>
-  </section>
+    </section>
+  </header>
+</section>
+<div class="row">
   <div id="picz" class="transitions-enabled">
     <% @pictures.each do |picture| %>
-      <div class="box">
-        <%= link_to cl_image_tag(picture.pic_img_url), "/pictures/#{picture.id}" %>
-      </div>
+    <div class="box">
+      <%= link_to cl_image_tag(picture.pic_img_url), "/pictures/#{picture.id}" %>
+    </div>
     <% end %>
   </div>
   <div class="next-page text-center">
     <%= will_paginate @pictures %>
   </div>
+</div>

@@ -19,6 +19,9 @@
 .box img:hover{
   opacity: 0.6;
 }
+.user-img {
+  border-radius: 50%;
+}
 
 .picture-container {
   .img-responsive {
@@ -38,8 +41,9 @@
 #upload-img .glyphicon {
   font-size: 50px;
 }
-
-
+.user {
+  padding-bottom: 30px;
+}
 .red-glif{
   color: red;
 }
@@ -53,11 +57,17 @@
 }
 
 .profile-img {
+  float: right;
   margin: 20px auto;
-  height: 152px;
-  width: 0px;
+  border-radius: 80%;
 }
 
 .card-img-top{
   margin: auto;
+}
+#profile-picture, #profile-firstname {
+  display: inline;
+}
+.icon-2 {
+  padding-right: 45px;
 }

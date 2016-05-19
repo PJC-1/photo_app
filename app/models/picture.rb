@@ -4,8 +4,25 @@ class Picture < ActiveRecord::Base
 
   belongs_to :user
   has_many :comments
-  has_many :picture_tags
+  has_many :picture_tags, dependent: :destroy
   has_many :tags, through: :picture_tags
+
+
+  # used for displaying random pictures in the picture index
+  def self.randomism
+    random_arr = []
+    new_arr = []
+    c = Picture.count
+    pictures = Picture.all
+    id_arr = pictures.map(&:id)
+    c.times do
+      random_arr << id_arr[rand(0...c)]
+    end
+    c.times do
+      new_arr << random_arr.map{|h| Picture.find_by_id(h)}
+    end
+    new_arr
+  end
 
   # returns pictures with that tag name
   def self.tagged_with(name)

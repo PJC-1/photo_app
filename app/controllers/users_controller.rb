@@ -15,17 +15,6 @@ class UsersController < ApplicationController
     @pictures = @user.pictures.paginate(:page => params[:page], :per_page => 6)
   end
 
-  # GET /users/1/edit
-  def edit
-    @user = User.find_by_id(params[:id])
-    if current_user == @user
-      render :edit
-      redirect_to user_path(@user)
-    else
-      redirect_to users_path
-    end
-  end
-
   def create
     @user = User.find_by_id(params[:id])
     Cloudinary::Uploader.upload(user_params)

@@ -1,5 +1,3 @@
-
-
 .jumbotron {
   padding-top: 0;
   padding-bottom: 0;
@@ -58,23 +56,41 @@
   padding: 0px;
   vertical-align: baseline;
 }
-img {
-margin-right: 107px;
-margin-bottom: 40px;
+.profile{
+  height: auto;
+  position: relative;
+  display:inline-grid;
+  height: 300px;
 }
+
+img {
+  width: 250px;
+  height: auto;
+  padding: 10px;
+}
+
 
 .bio-info {
-  align-items: stretch;
-  border: 0;
   box-sizing: border-box;
-  position: relative;
   margin: 0;
-  margin-left: 50px;
-  display: flex;
+  margin-left: 15px;
+  display: block;
+  text-align: left;
+  padding-left: 15px;
 }
 
+
 .profile-info {
-  padding-top: 55px;
+  padding-top: 15px;
+  float: left;
+  background-color: blue;
+  position: relative;
+}
+
+
+.profile-name-follow{
+  float:left;
+  position: relative;
 }
 
 .logo-small {
@@ -95,39 +111,4 @@ margin-bottom: 40px;
   height: auto;
   box-shadow: 2px 2px 2px #888888;
   -webkit-box-shadow: 2px 2px 2px #888888;
-}
-
-.frontpageimg{
-  margin: auto;
-  box-shadow: 2px 2px 2px #888888;
-  -webkit-box-shadow: 2px 2px 2px #888888;
-}
-footer {
-  margin-top: 45px;
-  padding-top: 5px;
-  border-top: 1px solid #eaeaea;
-  color: #777;
-
-}
-
-footer a {
-  color: #555;
-}
-
-footer a:hover {
-  color: #222;
-}
-
-footer small {
-  float: left;
-}
-
-footer ul {
-  float: center;
-  list-style: none;
-}
-
-footer ul li {
-  float: center;
-  margin-left: 15px;
 }
