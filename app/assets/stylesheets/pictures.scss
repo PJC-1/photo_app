@@ -14,6 +14,9 @@
 .box img {
   width: 100%;
 }
+.user-img {
+  border-radius: 50%;
+}
 
 .picture-container {
   .img-responsive {
@@ -48,8 +51,10 @@
 }
 
 .profile-img {
+  float: right;
   margin: 20px auto;
-  height: 152px;
-  width: 0px;
+  border-radius: 80%;
+  // height: 152px;
+  //width: 0px;
 
 }
