@@ -4,6 +4,8 @@ ___
 * **Name**: Pola Snap
 * **Github**: https://github.com/PJC-1/photo_app
 * **Heroku**: https://polasnap.herokuapp.com/
+* **Slides**: https://docs.google.com/presentation/d/1Is8SBOCQAvhh7db2mPuVXBl_MlKnmX5PWJ1Brhfv7f0/edit?usp=sharing
+* **Trello**: https://trello.com/b/QpXGpS7z
 ​
 
 ​
