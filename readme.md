@@ -42,7 +42,7 @@ ___
 
 
 
-* Sprint 2: From the set of links on the navbar the user will be able to visit "News Feed" page that features a randomized feed of all the users photos. These titles will be links for the posts page. The user will be able to user a search bar at the top of the page to search for photos by a tag name, after clicking search the user will be redirected to a view that shows randomized results of the search query. The news feed page features paginating to ensure a smooth and fast experience in terms of loading time.
+* Sprint 2: From the set of links on the nav-bar the user will be able to visit "News Feed" page that features a randomized feed of all the users photos. These titles will be links for the posts page. The user will be able to user a search bar at the top of the page to search for photos by a tag name, after clicking search the user will be redirected to a view that shows randomized results of the search query. The news feed page features paginating to ensure a smooth and fast experience in terms of loading time.
 
 
 
